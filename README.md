@@ -1,4 +1,27 @@
-# 
+# Dotfiles
+
+This is a collection of personal vim and tmux configuration.
+
+It provides quick load and unload script for remote/other computer.
+
+Mainly developed to work in Python and C++. The vim setting also includes markdown and latex contents, but the installation will not guarentee them working.
+
+## Contents
+
++ [Installation](#installation)
++ [Setting Notes](#setting_notes)
+
+## Installation
+
+### Load
+
+### Unload
+
+## Setting Notes
+
+### vim
+
+### tmux
 
 # TODO:
 
