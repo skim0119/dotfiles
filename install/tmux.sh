@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-CONFIG_NAME=".tmux.config"
-BACKUP_NAME=".tmux.config_bk"
+CONFIG_NAME=".tmux.conf"
+BACKUP_NAME=".tmux.conf_bk"
 DOTFILE_CONFIG="./tmux/tmux.config"
 
 if [ -f ~/${BACKUP_NAME} ]; then
