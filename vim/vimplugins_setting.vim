@@ -33,6 +33,9 @@ map <leader>md :InstantMarkdownPreview<CR>
 let vim_markdown_preview_pandoc=1
 let vim_markdown_preview_browser='Google Chrome'
 
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_folding_disabled = 1
+
 "==========================================================================="
 " Jedi vim python autocomplete plugin
 " https://github.com/davidhalter/jedi-vim
@@ -44,12 +47,20 @@ let g:jedi#completions_command = "<D-k>"
 " Vim Org-mode
 "==========================================================================="
 let g:org_aggressive_conceal = 0
-"
-"
+
+
 "==========================================================================="
 " Tagbar Majutsushi
 " https://github.com/majutsushi/tagbar 
 "==========================================================================="
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+\ }
 
 
 "==========================================================================="
@@ -68,35 +79,3 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "==========================================================================="
 
-let g:tagbar_type_markdown = {
-    \ 'ctagstype' : 'markdown',
-    \ 'kinds' : [
-        \ 'h:Heading_L1',
-        \ 'i:Heading_L2',
-        \ 'k:Heading_L3'
-    \ ]
-\ }
-
-
-" Plugin Shortucts
-" <F1> 
-map <F1> :make<cr>
-" <F2> NERDTree
-map <F2> :NERDTreeToggle<cr>
-" <F3> Tagbar Toggle
-nmap <F3> :TagbarToggle<cr>
-" <F5> [i 정의 내용 보여주기
-map <F5> [i
-" <F6> gd 변수 선언으로 이동
-map <F6> gd
-" <F7> shell
-map <F7> :VimShell<cr>
-" <F8> Dox
-map <F8> :Dox<cr>
-"" bnext, bprev
-map <F11> :bp<cr>
-map <F12> :bn<cr>
-" tabn
-"map <S-Tab> gt<cr>
-" bnext
-"map <S-F1> :bnext<cr>
