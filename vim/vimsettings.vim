@@ -57,3 +57,6 @@ set autochdir "Automatically change directory to current working directory.
 
 "Dictionary
 set dictionary=/usr/share/dict/words
+
+" Statusline
+set statusline+=%{FugitiveStatusline()}
