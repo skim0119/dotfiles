@@ -35,4 +35,3 @@ Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-source vim/vimplugins_setting.vim
