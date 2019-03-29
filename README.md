@@ -16,7 +16,7 @@ Mainly developed to work in Python and C++. The vim setting also includes markdo
 ### Load
 
 ``` bash
-git clone https://github.com/skim0119/dotfile://github.com/skim0119/dotfiles ~/.dotfiles
+git clone https://github.com/skim0119/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 source install.sh
 ```

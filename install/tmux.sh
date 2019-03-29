@@ -15,3 +15,5 @@ if [ -f ~/${CONFIG_NAME} ]; then
 fi
 
 cat ${DOTFILE_CONFIG} > ~/${CONFIG_NAME}
+
+return 1;

@@ -23,3 +23,4 @@ vim +PluginClean +qall
 
 echo "-- Plugin Install Complete --"
 
+return 1;
