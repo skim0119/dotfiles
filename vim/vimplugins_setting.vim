@@ -68,7 +68,7 @@ let g:tagbar_type_markdown = {
 " https://github.com/heavenshell/vim-pydocstring
 "==========================================================================="
 nmap <silent> <C-_> <Plug>(pydocstring)
-let g:pydocstring_templates_dir = '~/pydocstring'
+let g:pydocstring_templates_dir = '~/.dotfiles/vim/pydocstring'
 
 "==========================================================================="
 " Control-P Fuzzy Finder
