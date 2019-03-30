@@ -71,3 +71,13 @@ au BufNewFile,BuffilePre,BufRead *.md map! .img ![]()<ESC>2hi
 au BufNewFile,BuffilePre,BufRead *.md map! .eqn $$<ENTER>\begin{aligned}<ENTER>\end{aligned}<ENTER>$$<ESC>kO
 au BufNewFile,BuffilePre,BufRead *.md map! \udb \underbar{
 
+
+" Overlength color
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%120v.\+/
+
+" Python Customization: color self
+augroup PythonCustomization
+  " highlight python self, when followed by a comma, a period or a parenth
+   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
