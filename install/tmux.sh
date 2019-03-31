@@ -2,7 +2,7 @@
 
 CONFIG_NAME=".tmux.conf"
 BACKUP_NAME=".tmux.conf_bk"
-DOTFILE_CONFIG="./tmux/tmux.config"
+DOTFILE_CONFIG="./tmux/tmux.conf"
 
 if [ -f ~/${BACKUP_NAME} ]; then
     echo "-- Backup file exist. Please check and remove ~/${BACKUP_NAME} file.";
