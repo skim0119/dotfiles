@@ -31,6 +31,7 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'szymonmaszke/vimpyter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
