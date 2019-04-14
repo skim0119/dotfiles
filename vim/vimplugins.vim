@@ -31,6 +31,7 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'szymonmaszke/vimpyter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 
