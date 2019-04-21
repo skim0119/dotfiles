@@ -33,7 +33,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
