@@ -34,6 +34,8 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-obsession'
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

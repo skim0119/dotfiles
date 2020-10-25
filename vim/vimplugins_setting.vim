@@ -22,6 +22,7 @@ autocmd BufEnter,BufRead,BufNewFile *.md set filetype=markdown
 "autocmd bufEnter,BufRead,BufNewFile index.md set filetype=vimwiki
 let g:vimwiki_folding=''
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_conceal=0
 
 "==========================================================================="
 " vim-instant-markdown - Instant Markdown previews from Vim
@@ -36,6 +37,9 @@ let vim_markdown_preview_browser='Google Chrome'
 let g:vim_markdown_no_default_key_mappings = 1
 let g:vim_markdown_folding_disabled = 1
 
+let g:vim_markdown_conceal=0
+let g:vim_markdown_conceal_code_blocks=0
+
 "==========================================================================="
 " Jedi vim python autocomplete plugin
 " https://github.com/davidhalter/jedi-vim
@@ -47,7 +51,6 @@ let g:jedi#completions_command = "<D-k>"
 " Vim Org-mode
 "==========================================================================="
 let g:org_aggressive_conceal = 0
-
 
 "==========================================================================="
 " Tagbar Majutsushi
@@ -62,6 +65,10 @@ let g:tagbar_type_markdown = {
     \ ]
 \ }
 
+"==========================================================================="
+" vim-markdown
+"==========================================================================="
+let g:vim_markdown_conceal=0
 
 "==========================================================================="
 " vim-Pydocstring
@@ -69,6 +76,7 @@ let g:tagbar_type_markdown = {
 "==========================================================================="
 nmap <silent> <C-_> <Plug>(pydocstring)
 let g:pydocstring_templates_dir = '~/.dotfiles/vim/pydocstring'
+let g:pydocstring_doq_path = '/home/skim0119/miniconda3/bin/doq'
 
 "==========================================================================="
 " Control-P Fuzzy Finder
