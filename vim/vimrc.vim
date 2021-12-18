@@ -12,3 +12,6 @@ source ~/.dotfiles/vim/vimplugins_setting.vim
 
 " Additional Un-categorized Sets
 source ~/.dotfiles/vim/vimrc_test.vim
+
+" Vim Colorscheme
+source ~/.dotfiles/vim/vimcolor.vim

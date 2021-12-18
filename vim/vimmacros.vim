@@ -26,6 +26,13 @@ map ,8 :b!8<CR>
 map ,9 :b!9<CR>
 map ,0 :b!0<CR>
 
+" git merge tool
+if &diff
+    map <leader>1 :diffget LOCAL<CR>
+    map <leader>2 :diffget BASE<CR>
+    map <leader>3 :diffget REMOTE<CR>
+endif
+
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
