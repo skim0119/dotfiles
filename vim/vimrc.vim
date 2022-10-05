@@ -15,3 +15,5 @@ source ~/.dotfiles/vim/vimrc_test.vim
 
 " Vim Colorscheme
 source ~/.dotfiles/vim/vimcolor.vim
+source ~/.dotfiles/vim/syntax.vim
+
