@@ -5,7 +5,7 @@ syntax on
 "==========================================================================="
 " Airline
 "==========================================================================="
-"g:airline_theme='simple'
+let g:airline_theme="base16"
 
 "==========================================================================="
 " Tabular
@@ -114,7 +114,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_flake8_post_args='--ignore=E501,E221,F401'
 "==========================================================================="
-"
+
 "==========================================================================="
 " YouCompleteMe
 " https://github.com/ycm-core/YouCompleteMe#semantic-information-commands
@@ -123,3 +123,24 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 "==========================================================================="
 
+"==========================================================================="
+" vim-cpp-modern
+"==========================================================================="
+" Disable function highlighting (affects both C and C++ files)
+let g:cpp_function_highlight = 0
+
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
+"==========================================================================="
+
+"==========================================================================="
+" morhetz/gruvbox (Theme)
+"==========================================================================="
+autocmd vimenter * ++nested colorscheme gruvbox

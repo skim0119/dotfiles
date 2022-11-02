@@ -35,8 +35,10 @@ Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-obsession'
-"Plugin 'ycm-core/YouCompleteMe'
 Plugin 'wakatime/vim-wakatime'
+"Plugin 'tabnine/YouCompleteMe'
+Plugin 'bfrg/vim-cpp-modern'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
