@@ -1,0 +1,2 @@
+# Copy the PWD to the Clipboard
+pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'
