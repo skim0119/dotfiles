@@ -33,12 +33,13 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'  " Deprecated
 Plugin 'tpope/vim-obsession'
 Plugin 'wakatime/vim-wakatime'
 "Plugin 'tabnine/YouCompleteMe'
 Plugin 'bfrg/vim-cpp-modern'
 Plugin 'morhetz/gruvbox'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
