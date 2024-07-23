@@ -14,7 +14,7 @@ map :Tab :Tabular
 
 "==========================================================================="
 " VimWiki with markdown support
-" helppage -> :h vimwiki-syntax 
+" helppage -> :h vimwiki-syntax
 "==========================================================================="
 " let g:vimwiki_list = [{'path': '$HOME/Desktop/Dropbox/Notes', 'path_html':'$HOME/Desktop/Dropbox/Notes_html', 'syntax': 'markdown', 'ext': '.md'}]
 " let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
@@ -66,7 +66,7 @@ let g:org_aggressive_conceal = 0
 
 "==========================================================================="
 " Tagbar Majutsushi
-" https://github.com/majutsushi/tagbar 
+" https://github.com/majutsushi/tagbar
 "==========================================================================="
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
@@ -163,8 +163,13 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "==========================================================================="
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['flake8', 'pylint', 'black'],
+\   'python': ['autoflake', 'black'],
 \}
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
+let g:ale_python_flake8_options = '--config=$HOME/.dotfiles/flake8'
 
 "==========================================================================="
 " github/copilot
