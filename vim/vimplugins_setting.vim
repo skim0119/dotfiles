@@ -16,13 +16,14 @@ map :Tab :Tabular
 " VimWiki with markdown support
 " helppage -> :h vimwiki-syntax 
 "==========================================================================="
-let g:vimwiki_list = [{'path': '$HOME/Desktop/Dropbox/Notes', 'path_html':'$HOME/Desktop/Dropbox/Notes_html', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-autocmd BufEnter,BufRead,BufNewFile *.md set filetype=markdown
+" let g:vimwiki_list = [{'path': '$HOME/Desktop/Dropbox/Notes', 'path_html':'$HOME/Desktop/Dropbox/Notes_html', 'syntax': 'markdown', 'ext': '.md'}]
+" let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+" autocmd BufEnter,BufRead,BufNewFile *.md set filetype=markdown
 "autocmd bufEnter,BufRead,BufNewFile index.md set filetype=vimwiki
-let g:vimwiki_folding=''
+" let g:vimwiki_folding=''
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_conceal=0
+" let g:vimwiki_conceal=0
+" g:vimwiki_global_ext = 0
 
 "==========================================================================="
 " vim-instant-markdown - Instant Markdown previews from Vim
@@ -103,9 +104,9 @@ let g:ctrlp_cmd = 'CtrlP'
 " Vim Syntastic
 " https://github.com/vim-syntastic/syntastic#faqpython"
 "==========================================================================="
-" set statusline+=%#warningmsg#
-" set statusline += %{SyntasticStatuslineFlag()}
-" set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline += %{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -149,3 +150,29 @@ let g:cpp_simple_highlight = 1
 " morhetz/gruvbox (Theme)
 "==========================================================================="
 autocmd vimenter * ++nested colorscheme gruvbox
+
+"==========================================================================="
+" nathanaelkane/vim-indent-guides
+"==========================================================================="
+let g:indent_guides_enable_on_vim_startup = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+"==========================================================================="
+" ALE
+"==========================================================================="
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['flake8', 'pylint', 'black'],
+\}
+
+"==========================================================================="
+" github/copilot
+"==========================================================================="
+"
+let g:copilot_filetypes = {'gitcommit': v:true, 'markdown': v:true, 'yaml': v:true }
+autocmd BufReadPre *
+     \ let f=getfsize(expand("<afile>"))
+     \ | if f > 100000 || f == -2
+     \ | let b:copilot_enabled = v:false
+     \ | endif

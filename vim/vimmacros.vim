@@ -71,17 +71,21 @@ map <F12> :bn<cr>
 "map <S-F1> :bnext<cr>
 
 " Markdown Shortcut/Macros
-syn on
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-au BufNewFile,BuffilePre,BufRead *.md map! .hyp []()<ESC>2hi
-au BufNewFile,BuffilePre,BufRead *.md map! .img ![]()<ESC>2hi
-au BufNewFile,BuffilePre,BufRead *.md map! .eqn $$<ENTER>\begin{aligned}<ENTER>\end{aligned}<ENTER>$$<ESC>kO
-au BufNewFile,BuffilePre,BufRead *.md map! \udb \underbar{
+"syn on
+"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+"au BufNewFile,BuffilePre,BufRead *.md map! .hyp []()<ESC>2hi
+"au BufNewFile,BuffilePre,BufRead *.md map! .img ![]()<ESC>2hi
+"au BufNewFile,BuffilePre,BufRead *.md map! .eqn $$<ENTER>\begin{aligned}<ENTER>\end{aligned}<ENTER>$$<ESC>kO
+"au BufNewFile,BuffilePre,BufRead *.md map! \udb \underbar{
 
 
 " Overlength color
 autocmd FileType python highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 autocmd FileType python match OverLength /\%120v.\+/
+
+augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.txt,*.text,*.md,*.markdown :setfiletype markdown
+augroup END
 
 " Python Customization: color self
 augroup PythonCustomization

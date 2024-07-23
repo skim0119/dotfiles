@@ -13,33 +13,42 @@ call vundle#begin()
 
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'VundleVim/Vundle.vim'               " Vundle itself
 "Plugin 'vimwiki/vimwiki'
-Plugin 'majutsushi/tagbar'
-Plugin 'heavenshell/vim-pydocstring'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
+
+" Vim Interface Plugins
+Plugin 'tpope/vim-obsession'                " session autosave
+Plugin 'scrooloose/nerdtree'                " File explorer
+Plugin 'vim-airline/vim-airline'            " Status bar
+Plugin 'vim-airline/vim-airline-themes'     " Status bar themes
+Plugin 'majutsushi/tagbar'                  " Tagbar
+Plugin 'kien/ctrlp.vim'                     " Fuzzy file finder
+Plugin 'morhetz/gruvbox'                    " Color scheme
+Plugin 'nathanaelkane/vim-indent-guides'    " Indent guides
+
+" Integration Plugins
+Plugin 'tpope/vim-fugitive'                 " [Git] integration
+Plugin 'christoomey/vim-tmux-navigator'     " [Tmux] navigation integration
+Plugin 'tmux-plugins/vim-tmux-focus-events' " [Tmux] focus events
+Plugin 'roxma/vim-tmux-clipboard'           " [Tmux] clipboard share
+Plugin 'wakatime/vim-wakatime'              " [Wakatime] integration
+
+" Vim Editing Plugins
+Plugin 'tpope/vim-surround'                 " Tools to deal with surroundings
+Plugin 'godlygeek/tabular'                  " Align text
+
+" Vim Language Plugins
+Plugin 'dense-analysis/ale'                 " [General] linting engine
+Plugin 'heavenshell/vim-pydocstring'        " [Python] docstring generator
+Plugin 'plasticboy/vim-markdown'            " [Markdown] syntax highlighting
+Plugin 'bfrg/vim-cpp-modern'                " [C++] modern syntax highlighting
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'gabrielelana/vim-markdown'
 "Plugin 'szymonmaszke/vimpyter'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'roxma/vim-tmux-clipboard'
-Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'  " Deprecated
-Plugin 'tpope/vim-obsession'
-Plugin 'wakatime/vim-wakatime'
 "Plugin 'tabnine/YouCompleteMe'
-Plugin 'bfrg/vim-cpp-modern'
-Plugin 'morhetz/gruvbox'
-Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

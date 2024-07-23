@@ -47,7 +47,6 @@ set expandtab
 nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
-set backspace=indent,eol,start
 set fileformat=unix
 
 set clipboard=unnamed
