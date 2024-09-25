@@ -42,6 +42,7 @@ Plugin 'dense-analysis/ale'                 " [General] linting engine
 Plugin 'heavenshell/vim-pydocstring'        " [Python] docstring generator
 Plugin 'plasticboy/vim-markdown'            " [Markdown] syntax highlighting
 Plugin 'bfrg/vim-cpp-modern'                " [C++] modern syntax highlighting
+
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 "Plugin 'jceb/vim-orgmode'
@@ -53,4 +54,3 @@ Plugin 'bfrg/vim-cpp-modern'                " [C++] modern syntax highlighting
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-

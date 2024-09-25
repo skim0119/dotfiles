@@ -50,18 +50,17 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 " nnoremap <c-h> <c-w>h
 
 " Plugin Panel Toggle
-" <F1> 
+" <F1>
 " map <F1> :make<cr>
 " <F2> NERDTree
 map <F2> :NERDTreeToggle<cr>
 " <F3> Tagbar Toggle
 nmap <F3> :TagbarToggle<cr>
 " <F4>
-" <F5> 
+" <F5>
 " <F6> gd 변수 선언으로 이동
-map <F6> gd
-" <F7> 
-" <F8> 
+" <F7>
+" <F8>
 "" bnext, bprev
 map <F11> :bp<cr>
 map <F12> :bn<cr>
