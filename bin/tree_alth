@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Function to display the tree structure with size
+print_tree() {
+    local dir="$1"
+    local prefix="$2"
+    local level="$3"
+    local max_level="$4"
+
+    # List all items in the directory
+    local items=("$dir"/*)
+    local count=${#items[@]}
+    local i=1
+
+    for item in "${items[@]}"; do
+        local connector="├──"
+        [ $i -eq $count ] && connector="└──"
+
+        if [ -d "$item" ]; then
+			# local dir_size
+			dir_size=$(du -sh "$item" 2>/dev/null | cut -f1)
+            echo "${prefix}${connector} $(basename "$item") (Size: $dir_size)"
+
+            # Recurse if the level limit isn't reached
+            if [ "$level" -lt "$max_level" ]; then
+                print_tree "$item" "${prefix}    " $((level + 1)) "$max_level"
+            fi
+        elif [ -f "$item" ]; then
+            local file_size
+            file_size=$(du -sh "$item" 2>/dev/null | cut -f1)
+            echo "${prefix}${connector} $(basename "$item") (Size: $file_size)"
+        fi
+
+        ((i++))
+    done
+}
+
+# Main function to handle directory and size
+main() {
+    local dir="."
+    local max_level=2  # Default depth level
+
+    # Parse options
+    while getopts "L:" opt; do
+        case $opt in
+            L)
+                max_level="$OPTARG"
+                ;;
+            *)
+                echo "Usage: $0 [-L max_depth] [directory]"
+                exit 1
+                ;;
+        esac
+    done
+
+    shift $((OPTIND -1))
+    dir="${1:-.}"  # Default to current directory if no directory is passed
+
+    if [ ! -d "$dir" ]; then
+        echo "Error: $dir is not a directory."
+        exit 1
+    fi
+
+    # Calculate total size of the directory
+    local total_size
+    total_size=$(du -sh "$dir" | cut -f1)
+
+    echo "Directory: $dir (Total Size: $total_size)"
+    echo
+    print_tree "$dir" "" 1 "$max_level"
+}
+
+# Run the main function with the provided argument
+main "$@"
