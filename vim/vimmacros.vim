@@ -50,18 +50,17 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 " nnoremap <c-h> <c-w>h
 
 " Plugin Panel Toggle
-" <F1> 
+" <F1>
 " map <F1> :make<cr>
 " <F2> NERDTree
 map <F2> :NERDTreeToggle<cr>
 " <F3> Tagbar Toggle
 nmap <F3> :TagbarToggle<cr>
 " <F4>
-" <F5> 
+" <F5>
 " <F6> gd 변수 선언으로 이동
-map <F6> gd
-" <F7> 
-" <F8> 
+" <F7>
+" <F8>
 "" bnext, bprev
 map <F11> :bp<cr>
 map <F12> :bn<cr>
@@ -71,17 +70,21 @@ map <F12> :bn<cr>
 "map <S-F1> :bnext<cr>
 
 " Markdown Shortcut/Macros
-syn on
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-au BufNewFile,BuffilePre,BufRead *.md map! .hyp []()<ESC>2hi
-au BufNewFile,BuffilePre,BufRead *.md map! .img ![]()<ESC>2hi
-au BufNewFile,BuffilePre,BufRead *.md map! .eqn $$<ENTER>\begin{aligned}<ENTER>\end{aligned}<ENTER>$$<ESC>kO
-au BufNewFile,BuffilePre,BufRead *.md map! \udb \underbar{
+"syn on
+"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+"au BufNewFile,BuffilePre,BufRead *.md map! .hyp []()<ESC>2hi
+"au BufNewFile,BuffilePre,BufRead *.md map! .img ![]()<ESC>2hi
+"au BufNewFile,BuffilePre,BufRead *.md map! .eqn $$<ENTER>\begin{aligned}<ENTER>\end{aligned}<ENTER>$$<ESC>kO
+"au BufNewFile,BuffilePre,BufRead *.md map! \udb \underbar{
 
 
 " Overlength color
 autocmd FileType python highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 autocmd FileType python match OverLength /\%120v.\+/
+
+augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.txt,*.text,*.md,*.markdown :setfiletype markdown
+augroup END
 
 " Python Customization: color self
 augroup PythonCustomization
