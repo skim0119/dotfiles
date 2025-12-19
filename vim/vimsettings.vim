@@ -21,6 +21,7 @@ set incsearch        " 키워드 입력시 점진적 검색
 set cursorline       " 편집 위치에 커서 라인 설정
 set laststatus=2     " 상태바 표시를 항상한다
 set smartcase
+set autoread
 
 nnoremap <CR> :nohlsearch<cr>
 
