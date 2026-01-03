@@ -161,15 +161,18 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "==========================================================================="
 " ALE
 "==========================================================================="
+let g:ale_linters= {'python': ['ruff']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['autoflake', 'black'],
+\   'python': ["ruff", "ruff_format"],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_python_flake8_options = '--config=$HOME/.dotfiles/flake8'
+let g:ale_python_ruff_options = '--ignore E731,F401'
 
 "==========================================================================="
 " github/copilot
