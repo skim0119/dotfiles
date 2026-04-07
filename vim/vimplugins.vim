@@ -21,7 +21,7 @@ Plugin 'tpope/vim-obsession'                " session autosave
 Plugin 'scrooloose/nerdtree'                " File explorer
 Plugin 'vim-airline/vim-airline'            " Status bar
 Plugin 'vim-airline/vim-airline-themes'     " Status bar themes
-Plugin 'majutsushi/tagbar'                  " Tagbar
+Plugin 'preservim/tagbar'                  " Tagbar
 Plugin 'kien/ctrlp.vim'                     " Fuzzy file finder
 Plugin 'morhetz/gruvbox'                    " Color scheme
 Plugin 'nathanaelkane/vim-indent-guides'    " Indent guides
